@@ -1,7 +1,8 @@
-#Fri Oct 24 12:54:49 CEST 2003
-=
+ABBR=
 hlp_body=
 hlp_close=
+hlp_close_window=Close
+hlp_err_no_key=No help key specified
 hlp_locale=
 hlp_no_help_available=
 hlp_save=
