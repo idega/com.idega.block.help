@@ -1,0 +1,10 @@
+#Tue Sep 09 17:03:07 CEST 2003
+=No bundle for help text specified
+hlp_body=Text
+hlp_close=St\u00E4ng
+hlp_locale=Spr\u00E5k
+hlp_no_help_available=Ingen hj\u00E4lp hittas for vald text och spr\u00E5k.
+hlp_save=Spara
+hlp_title=Titel
+iw.component.com.idega.block.help.presentation.Help.name=Help
+iw.component.com.idega.block.help.presentation.HelpTree.name=HelpTree
