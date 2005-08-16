@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project>
+<project xmlns:j="jelly:core" xmlns:ant="jelly:ant" >
   <extend>${base.project.dir}/block-dependencies.xml</extend>
   <pomVersion>3</pomVersion>
   <name>idegaWeb Help Block</name>
