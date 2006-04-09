@@ -69,14 +69,18 @@ public class HelpTree extends Block {
 		link.setURL("#");
 		link.setNoTextObject(true);
 		link.setClassToInstanciate(DisplayHelp.class);
-		if (_titleStyleAttribute != null)
-			link.addParameter(TITLE_STYLE,_titleStyleAttribute);
-		if (_titleStyleClass != null)
-			link.addParameter(TITLE_CLASS,_titleStyleClass);
-		if (_bodyStyleAttribute != null)
-			link.addParameter(BODY_STYLE,_bodyStyleAttribute);
-		if (_bodyStyleClass != null)
-			link.addParameter(BODY_CLASS,_bodyStyleClass);
+		if (this._titleStyleAttribute != null) {
+			link.addParameter(TITLE_STYLE,this._titleStyleAttribute);
+		}
+		if (this._titleStyleClass != null) {
+			link.addParameter(TITLE_CLASS,this._titleStyleClass);
+		}
+		if (this._bodyStyleAttribute != null) {
+			link.addParameter(BODY_STYLE,this._bodyStyleAttribute);
+		}
+		if (this._bodyStyleClass != null) {
+			link.addParameter(BODY_CLASS,this._bodyStyleClass);
+		}
 		tree.setLinkPrototype(link);
 		
 		tree.setTarget(HELP_FRAME);
@@ -272,34 +276,34 @@ public class HelpTree extends Block {
 	}
 	
 	public void setTitleStyleAttribute(String styleAttribute) {
-		_titleStyleAttribute = styleAttribute;
+		this._titleStyleAttribute = styleAttribute;
 	}
 	
 	public void setTitleStyleClass(String styleClass) {
-		_titleStyleClass = styleClass;	
+		this._titleStyleClass = styleClass;	
 	}
 	
 	public void setBodyStyleAttribute(String styleAttribute) {
-		_bodyStyleAttribute = styleAttribute;		
+		this._bodyStyleAttribute = styleAttribute;		
 	}
 	
 	public void setBodyStyleClass(String styleClass) {
-		_bodyStyleClass = styleClass;			
+		this._bodyStyleClass = styleClass;			
 	}
 	
 	public void setLinkStyleAttribute(String styleAttribute) {
-		_linkStyleAttribute = styleAttribute;
+		this._linkStyleAttribute = styleAttribute;
 	}
 	
 	public void setLinkStyleClass(String styleClass) {
-		_linkStyleClass = styleClass;			
+		this._linkStyleClass = styleClass;			
 	}
 	
 	public void setSeeAlsoStyleAttribute(String styleAttribute) {
-		_seeAlsoStyleAttribute = styleAttribute;		
+		this._seeAlsoStyleAttribute = styleAttribute;		
 	}
 	
 	public void setSeeAlsoStyleClass(String styleClass) {
-		_seeAlsoStyleClass = styleClass;			
+		this._seeAlsoStyleClass = styleClass;			
 	}		
 }
