@@ -101,9 +101,9 @@ public class DisplayHelp extends PresentationObjectContainer {
 			title = new Text(this._localizedTitle);
 			
       if (this._titleStyleAttribute != null) {
-				title.setStyleAttribute(this._titleStyleAttribute);
-			}
-			else if (this._titleStyleClass != null) {
+		title.setStyleAttribute(this._titleStyleAttribute);
+	}
+	else if (this._titleStyleClass != null) {
 				title.setStyleClass(this._titleStyleClass);
 			}
   		t.add(title, 1, row++);

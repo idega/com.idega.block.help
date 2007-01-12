@@ -193,8 +193,4 @@ public class HelpNode implements ICTreeNode {
 	protected void setParent(ICTreeNode parent) {
 		this._parent = parent;
 	}
-	
-	public String getId(){
-		return Integer.toString(this._key);
-	}
 }
