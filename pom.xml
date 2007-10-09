@@ -9,9 +9,9 @@
   </parent>
   <packaging>jar</packaging>
   <groupId>com.idega.block.addon</groupId>
-  <name>idegaWeb Help Block</name>
   <artifactId>com.idega.block.help</artifactId>
-  <version>4.0-SNAPSHOT</version>
+  <name>idegaWeb Help Block</name>
+  <version>${com.idega.block.addon-com.idega.block.help-version}</version>
   <inceptionYear>2000</inceptionYear>
   <scm>
     <connection>scm:cvs:ext:${user.name}@code.idega.com:/idega/cvs:${groupId}/${artifactId}/</connection>
@@ -59,8 +59,6 @@
     <dependency>
       <groupId>com.idega.block.platform</groupId>
       <artifactId>com.idega.core</artifactId>
-      <version>4.0-SNAPSHOT</version>
-      <type>jar</type>
     </dependency>
   </dependencies>
   
