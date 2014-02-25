@@ -12,11 +12,11 @@ package com.idega.block.help.data;
 import com.idega.core.data.ICTreeNode;
 import com.idega.idegaweb.IWApplicationContext;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
-import java.util.Vector;
 
 /**
  * This class does something very clever.....
@@ -24,12 +24,13 @@ import java.util.Vector;
  * @author <a href="palli@idega.is">Pall Helgason</a>
  * @version 1.0
  */
-public class HelpNode implements ICTreeNode {
+public class HelpNode implements ICTreeNode<HelpNode> {
+	
 	protected int _key = -1;
 	protected String _bundle = null;
 	protected String _name = null;
-	protected ICTreeNode _parent = null;
-	protected List _children = null;
+	protected HelpNode _parent = null;
+	protected List<HelpNode> _children = null;
 	protected int _order = -1;
 
 	public HelpNode(int key, String bundle, String name) {
@@ -46,9 +47,9 @@ public class HelpNode implements ICTreeNode {
 	/**
 	 * @see com.idega.core.ICTreeNode#getChildrenIterator()
 	 */
-	public Iterator getChildrenIterator() {
-	    Iterator it = null;
-	    Collection children = getChildren();
+	public Iterator<HelpNode> getChildrenIterator() {
+	    Iterator<HelpNode> it = null;
+	    Collection<HelpNode> children = getChildren();
 	    if (children != null) {
 	        it = children.iterator();
 	    }
@@ -58,7 +59,7 @@ public class HelpNode implements ICTreeNode {
 	/**
 	 * @see com.idega.core.ICTreeNode#getChildren()
 	 */
-	public Collection getChildren() {
+	public Collection<HelpNode> getChildren() {
 		if (this._children != null) {
 			return this._children;
 		}
@@ -77,7 +78,7 @@ public class HelpNode implements ICTreeNode {
 	/**
 	 * @see com.idega.core.ICTreeNode#getChildAtIndex(int)
 	 */
-	public ICTreeNode getChildAtIndex(int childIndex) {
+	public HelpNode getChildAtIndex(int childIndex) {
 		if (this._children != null) {
 			return (HelpNode)this._children.get(childIndex);
 		}
@@ -101,7 +102,7 @@ public class HelpNode implements ICTreeNode {
 	/**
 	 * @see com.idega.core.ICTreeNode#getIndex(ICTreeNode)
 	 */
-	public int getIndex(ICTreeNode node) {
+	public int getIndex(HelpNode node) {
 		if (this._children != null) {
 			return this._children.indexOf(node);
 		}
@@ -113,7 +114,7 @@ public class HelpNode implements ICTreeNode {
 	/**
 	 * @see com.idega.core.ICTreeNode#getParentNode()
 	 */
-	public ICTreeNode getParentNode() {
+	public HelpNode getParentNode() {
 		return this._parent;
 	}
 
@@ -181,16 +182,16 @@ public class HelpNode implements ICTreeNode {
 		this._bundle = bundle;	
 	}
 	
-	public void addChild(ICTreeNode child) {
+	public void addChild(HelpNode child) {
 		if (this._children == null) {
-			this._children = new Vector();
+			this._children = new ArrayList<HelpNode>();
 		}
 			
 		this._children.add(child);	
 		((HelpNode)child).setParent(this);
 	}
 	
-	protected void setParent(ICTreeNode parent) {
+	protected void setParent(HelpNode parent) {
 		this._parent = parent;
 	}
 	
